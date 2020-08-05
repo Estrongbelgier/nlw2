@@ -6,6 +6,7 @@ import giveClasses from "../../assets/images/icons/give-classes.svg";
 import purpleHeart from "../../assets/images/icons/purple-heart.svg";
 
 import "./styles.css";
+import { Link } from "react-router-dom";
 
 const Landing: React.FC = () => {
   return (
@@ -19,13 +20,13 @@ const Landing: React.FC = () => {
         <img src={landingImg} alt="study platform" className="hero-image" />
 
         <div className="buttons-container">
-          <a href="" className="study">
+          <Link to="study" className="study">
             <img src={studyIcon} alt="Study" />
-          </a>
+          </Link>
 
-          <a href="" className="give-classes">
+          <Link to="give-classes" className="give-classes">
             <img src={giveClasses} alt="Give Classes" />
-          </a>
+          </Link>
         </div>
         <span className="total-connections">
           Total of 200 connections <img src={purpleHeart} alt="purple heart" />
