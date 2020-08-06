@@ -40,6 +40,13 @@
   line-height: 4.2rem;
   color: var(--color-title-in-primary);
 }
+.page-header .header-content p {
+  max-width: 30rem;
+  line-height: 2.6rem;
+  font-size: 1.6rem;
+  margin-top: 2.4rem;
+  color: var(--color-title-in-primary);
+}
 
 #page-teacher-list {
   width: 100vw;
