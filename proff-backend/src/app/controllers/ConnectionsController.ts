@@ -15,7 +15,7 @@ class ConnectionsController {
 
     const { total } = connections[0];
 
-    return res.status(200).json(total);
+    return res.status(200).json({ total }); // WARNING Nunca se esqueca que retonar um Objeto {objeto}
   }
 }
 
