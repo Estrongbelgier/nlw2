@@ -10,15 +10,19 @@ import { Link } from "react-router-dom";
 import api from "../../services/api";
 
 const Landing: React.FC = () => {
-  const [totalConections, setTotalConections] = useState(0);
+  const [totalConnections, setTotalConnections] = useState(0);
 
+  /*   async function getTotal() {
+    const total = await api.get("connections");
+    return total;
+  }
+ */
   useEffect(() => {
-    api.get("connections").then((res) => {
-      const { total } = res.data;
-
-      setTotalConections(total);
+    api.get("connections").then((response) => {
+      const { total } = response.data;
+      setTotalConnections(total);
     });
-  }, [totalConections]);
+  }, []);
 
   return (
     <div id="landing">
@@ -40,7 +44,7 @@ const Landing: React.FC = () => {
           </Link>
         </div>
         <span className="total-connections">
-          Total of {totalConections} connections{" "}
+          Total of {totalConnections} connections
           <img src={purpleHeart} alt="purple heart" />
         </span>
       </div>
